@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="B3 Trading market education, live charts and simulated trading dashboard." />
+  <title>B3 Trading | Invest with strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">B3</span><span>B3 Trading</span></a>
+    <nav>
+      <a href="#markets">Markets</a><a href="#education">Education</a><a href="#news">News</a><a class="button button-small" href="#register">Register</a>
+    </nav>
+  </header>
+
+  <div id="ticker-widget" class="ticker-strip"></div>
+
+  <main>
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <span class="eyebrow">Strategy • Education • Discipline</span>
+        <h1>Invest with strategy. Grow with confidence.</h1>
+        <p>Learn how markets move, practice with virtual capital and build a disciplined process before taking financial risk.</p>
+        <div class="hero-actions">
+          <a class="button" href="#register">Create demo account →</a>
+          <a class="button button-secondary" href="#markets">Explore live markets</a>
+        </div>
+        <div class="trust-row"><span>✓ Risk-first education</span><span>✓ Live market tools</span><span>✓ Beginner-friendly</span></div>
+      </div>
+      <div class="hero-panel">
+        <div class="metric-card"><span>Demo starting balance</span><strong>$10,000.00</strong><small>Virtual funds — no real-money risk</small></div>
+        <div class="metric-grid">
+          <div><span>Markets</span><strong>Stocks</strong></div><div><span>Also available</span><strong>Forex & Crypto</strong></div>
+          <div><span>Risk tools</span><strong>Stop Loss</strong></div><div><span>Learning mode</span><strong>Paper Trading</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="markets" class="section-shell section-block">
+      <div class="section-heading"><span class="eyebrow">Live market graphics</span><h2>Search and analyze global instruments</h2><p>Use the symbol search inside the chart to navigate stocks, indices, forex pairs and cryptocurrencies.</p></div>
+      <div id="landing-chart" class="widget-card widget-height-large"></div>
+    </section>
+
+    <section id="education" class="section-shell section-block">
+      <div class="section-heading"><span class="eyebrow">Built for disciplined learning</span><h2>Everything needed to practice a trading process</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">↗</span><h3>Demo trading</h3><p>Buy and sell with $10,000 in virtual funds and track open positions.</p></article>
+        <article class="feature-card"><span class="feature-icon">◈</span><h3>Risk controls</h3><p>Set simulated stop-loss levels and select margin for educational scenarios.</p></article>
+        <article class="feature-card"><span class="feature-icon">▥</span><h3>Live charts</h3><p>Search market symbols and analyze current price action with TradingView.</p></article>
+        <article class="feature-card"><span class="feature-icon">◎</span><h3>Market education</h3><p>Build a repeatable process focused on analysis, discipline and risk management.</p></article>
+      </div>
+    </section>
+
+    <section id="news" class="section-shell section-block split-section">
+      <div class="section-heading news-copy"><span class="eyebrow">What moves the markets</span><h2>Latest financial news</h2><p>The news feed refreshes automatically with current market coverage.</p></div>
+      <div id="news-widget" class="widget-card widget-height-news"></div>
+    </section>
+
+    <section id="register" class="section-shell section-block registration-section">
+      <div class="registration-copy">
+        <span class="eyebrow">Create your profile</span><h2>Start with a risk-free demo account</h2>
+        <p>Your profile stores your name, email, phone number and account preference. The welcome email activates after the sender email is configured.</p>
+        <ul class="check-list"><li>✓ $10,000 virtual starting balance</li><li>✓ Live market charts and news</li><li>✓ Portfolio and order history</li></ul>
+      </div>
+      <form id="registration-form" class="registration-card">
+        <label>Full name<input id="full-name" required autocomplete="name" /></label>
+        <label>Email address<input id="email" required type="email" autocomplete="email" /></label>
+        <label>Phone number<input id="phone" required type="tel" autocomplete="tel" /></label>
+        <label>Password<input id="password" required type="password" minlength="8" autocomplete="new-password" /></label>
+        <fieldset><legend>Account preference</legend>
+          <label class="radio-row"><input type="radio" name="accountType" value="demo" checked /> Demo account</label>
+          <label class="radio-row"><input type="radio" name="accountType" value="live" /> Request live account review</label>
+        </fieldset>
+        <button id="register-button" class="button" type="submit">Register and open dashboard</button>
+        <p id="registration-message" class="form-message" aria-live="polite"></p>
+        <small>Live accounts are not activated automatically. Identity verification, compliance review and an approved broker/custodian integration are required.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">B3</span><span>B3 Trading</span></div><p>Educational platform. Trading involves risk and may result in loss. No guaranteed returns.</p><p>© <span id="year"></span> B3 Trading.</p></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
